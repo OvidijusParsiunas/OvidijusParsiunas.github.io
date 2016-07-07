@@ -1,0 +1,16 @@
+
+.container {
+    height: 400px;
+    width: auto;
+    background-image: url(/media/sample-image1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }​
+
+  @media screen and (min-width : 0px){
+  }
+
+  @media screen and (min-width : 768px){
+    .container { height: 100vh;}
+  }
