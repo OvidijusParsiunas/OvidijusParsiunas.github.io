@@ -2,6 +2,7 @@
   pointer-events: none;
 }
 
+
 .h1-custom{
 	font-family: "Brush Script MT", cursive;
 	font-size: 24px;
@@ -9,4 +10,40 @@
 	font-variant: normal;
 	font-weight: 500;
 	line-height: 26.4px;
+}
+
+.intro-height{
+  height: 400px;
+}
+
+
+#parallax{
+      height:500px;
+      padding-top:50px;
+      padding-bottom:50px;
+      overflow:auto;
+      background: url('/media/sample-image1.jpg') no-repeat top center fixed;
+        color:#fff;
+        background-size:cover;
+}
+
+.blurImg{
+      position: absolute;
+      height: 400px;
+      width: 100%;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+}
+.blur {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+@media screen and (min-width : 768px){
+  .intro-height { height: 100vh; }
+  .blurImg { height: 100vh; }
 }
