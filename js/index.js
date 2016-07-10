@@ -42,8 +42,12 @@ $('#parallax').parallax({
 (function() {
   $(window).scroll(function() {
     var oVal;
-    oVal = $(window).scrollTop() / 200;
+    oVal = $(window).scrollTop() / 450;
     return $(".blur").css("opacity", oVal);
   });
 
 }).call(this);
+
+window.setTimeout(function(){
+  $('#section1').addClass("hovereffect2");
+}, 500);
