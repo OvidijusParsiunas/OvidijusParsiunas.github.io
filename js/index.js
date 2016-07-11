@@ -4,7 +4,7 @@
       var windowHeight = $(window).height();
         // Establish default settings
       var settings = $.extend({
-            speed        : 0.15
+            speed        : 0.01
       }, options);
 
         // Iterate over each object in collection
@@ -36,7 +36,7 @@
 }(jQuery));
 
 $('#parallax').parallax({
-	speed :	0.2
+	speed :	0.8
 });
 
 (function() {
@@ -51,3 +51,9 @@ $('#parallax').parallax({
 window.setTimeout(function(){
   $('#section1').addClass("hovereffect2");
 }, 500);
+
+window.setTimeout(function(){
+  $("#testing").animate({
+            top: '+25%',
+          height: '48%'}, 1000);
+        }, 2000);

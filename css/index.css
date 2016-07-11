@@ -18,13 +18,12 @@
 
 
 #parallax{
-      height:500px;
-      padding-top:50px;
+      height:200px;
       padding-bottom:50px;
       overflow:auto;
-      background: url('/media/sample-image1.jpg') no-repeat top center fixed;
-        color:#fff;
-        background-size:cover;
+      background: url('/media/profile.jpg') no-repeat top center fixed;
+      background-size: 100vw, 100vh;
+      color:#fff;
 }
 
 .blurImg{
@@ -46,15 +45,18 @@
 @media screen and (min-width : 768px){
   .intro-height { height: 100vh; }
   .blurImg { height: 100vh; }
+  #parallax { height: 50vh; }
 }
 
 
 .hovereffect .overlay {
-  position: absolute;
+  position: relative;
   overflow: hidden;
+  height:2px;
   width: 80%;
   left: 10%;
-  top: 10%;
+  top: 50%;
+  bottom: 10%;
   border-bottom: 1px solid #FFF;
   border-top: 1px solid #FFF;
   -webkit-transition: opacity 2, -webkit-transform 2s;
@@ -62,6 +64,10 @@
   -webkit-transform: scale(0,1);
   -ms-transform: scale(0,1);
   transform: scale(0,1);
+}
+
+@media screen and (min-width : 768px){
+  .hovereffect .overlay { height: 2px; }
 }
 
 .hovereffect2 .overlay {
@@ -88,16 +94,25 @@
   text-transform: uppercase;
   text-align: center;
   position: relative;
-  font-size: 17px;
+  font-family: Optima;
+  font-size: 10px;
   background-color: transparent;
   color: #FFF;
-  padding: 1em 0;
+  padding: 4%;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(0,-100%,0);
   transform: translate3d(0,-100%,0);
+}
+
+#small-text{
+  font-size: 20px;
+}
+
+@media screen and (min-width : 768px){
+  .hovereffect h2 { font-size: 80px; }
 }
 
 .hovereffect a, hovereffect p {
