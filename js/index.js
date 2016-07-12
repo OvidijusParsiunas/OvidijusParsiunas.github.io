@@ -48,12 +48,39 @@ $('#parallax').parallax({
 
 }).call(this);
 
+//Unused into hover animatio
+$(document).ready(function(){
+setTimeout(function(){
+  $("#testing").hover(function(){
+      $('.hovereffect .overlay ').animate({left: '0%', width: '100%'});
+      }, function(){
+      $('.hovereffect .overlay ').animate({left: '10%', width: '80%'});
+  });
+}, 4000);
+});
+
+$(document).ready(function(){
 window.setTimeout(function(){
   $('#section1').addClass("hovereffect2");
-}, 500);
+}, 1000);
+
+window.setTimeout(function(){
+  $('#static-text').addClass("animated fadeIn");
+}, 4500);
+
+window.setTimeout(function(){
+  $('.tlt').css("opacity", "1.0")
+  $('.tlt').textillate({
+      minDisplayTime: 2500,
+      in: { effect: 'fadeIn' },
+      out :{  delay: 3, effect: 'fadeOut'},
+      loop: true
+  });
+}, 6500);
 
 window.setTimeout(function(){
   $("#testing").animate({
             top: '+25%',
           height: '48%'}, 1000);
-        }, 2000);
+        }, 2850);
+});
