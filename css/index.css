@@ -28,7 +28,7 @@
 
 .blurImg{
       position: absolute;
-      height: 400px;
+      height: 100vh;
       width: 100%;
       background-size: cover;
       -webkit-background-size: cover;
@@ -48,22 +48,22 @@
   #parallax { height: 50vh; }
 }
 
-
 .hovereffect .overlay {
   position: relative;
   overflow: hidden;
-  height:2px;
+  height: 2px;
   width: 80%;
   left: 10%;
   top: 50%;
   bottom: 10%;
   border-bottom: 1px solid #FFF;
   border-top: 1px solid #FFF;
-  -webkit-transition: opacity 2, -webkit-transform 2s;
+  -webkit-transition: opacity 2s, -webkit-transform 2s;
   transition: opacity 2s, transform 2s;
   -webkit-transform: scale(0,1);
   -ms-transform: scale(0,1);
   transform: scale(0,1);
+  z-index: 2;
 }
 
 @media screen and (min-width : 768px){
@@ -86,8 +86,14 @@
 
 .hovereffect2 #hover {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
-  filter: brightness(0.65);
-  -webkit-filter: brightness(0.65);
+  filter: brightness(0.7);
+  -webkit-filter: brightness(0.7);
+}
+
+.hovereffect3 #hover{
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+  filter: brightness(0.725);
+  -webkit-filter: brightness(0.725);
 }
 
 .hovereffect h2 {
@@ -129,12 +135,43 @@
   opacity: 0;
 }
 
-#center-border{
+#center-line{
   position: absolute;
   border-top: 1px solid #FFF;
-  left:10%;
+  left:50vw;
   top: 50vh;
   width: 0;
   height: 2px;
-  z-index: 10;
+  z-index: 1;
+}
+
+h1 {
+  color: red;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(transparent, transparent),
+             url(/media/4.jpg) repeat;
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+}
+
+/*
+ * This style will be shared with the SVG because
+ * I have to replace the DOM element in Firefox.
+ * Otherwise the SVG pattern will be broken.
+ */
+.headline {
+  font: bold 2.25em sans-serif;
+  font-size: 6em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#square{
+  position: absolute;
+  top: 48.5vh;
+  left: 48.5%;
+  height: 30px;
+  width: 30px;
+  opacity: 0;
+  z-index: 1;
 }
