@@ -164,6 +164,7 @@ h1 {
   font: bold sans-serif;
   font-size: 5em;
   font-weight: bold;
+  opacity: 0;
 }
 
 .backgroundImage{
@@ -210,4 +211,8 @@ h1 {
   .parent-header-font { font-size: 4px; }
   .intro-height {height: 50vh; }
   .blurImg {height: 50vh; }
+}
+
+.visible{
+     opacity:1;
 }
