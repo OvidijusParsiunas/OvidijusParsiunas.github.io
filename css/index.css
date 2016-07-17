@@ -2,6 +2,9 @@
   pointer-events: none;
 }
 
+.parent-header-font{
+  font-size: 14px;
+}
 
 .h1-custom{
 	font-family: "Brush Script MT", cursive;
@@ -13,7 +16,8 @@
 }
 
 .intro-height{
-  height: 400px;
+  position: relative;
+  height: 100vh;
 }
 
 
@@ -43,8 +47,6 @@
 }
 
 @media screen and (min-width : 768px){
-  .intro-height { height: 100vh; }
-  .blurImg { height: 100vh; }
   #parallax { height: 50vh; }
 }
 
@@ -55,7 +57,6 @@
   width: 80%;
   left: 10%;
   top: 50%;
-  bottom: 10%;
   border-bottom: 1px solid #FFF;
   border-top: 1px solid #FFF;
   -webkit-transition: opacity 2s, -webkit-transform 2s;
@@ -86,31 +87,26 @@
 
 .hovereffect2 #hover {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
-  filter: brightness(0.7);
-  -webkit-filter: brightness(0.7);
+  filter: brightness(0.75);
+  -webkit-filter: brightness(0.75);
 }
 
 .hovereffect3 #hover{
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
-  filter: brightness(0.725);
-  -webkit-filter: brightness(0.725);
+  filter: brightness(0.8);
+  -webkit-filter: brightness(0.8);
 }
 
 .hovereffect h2 {
-  top: 22%;
+  top: 25%;
   text-transform: uppercase;
   text-align: center;
   position: relative;
   font-family: Optima;
-  font-size: 10px;
+  font-size: 5.8em;
   background-color: transparent;
   color: #FFF;
   opacity: 0;
-}
-
-
-@media screen and (min-width : 768px){
-  .hovereffect h2 { font-size: 80px; }
 }
 
 .hovereffect a, hovereffect p {
@@ -138,8 +134,8 @@
 #center-line{
   position: absolute;
   border-top: 1px solid #FFF;
-  left:50vw;
-  top: 50vh;
+  left:50%;
+  top: 52%;
   width: 0;
   height: 2px;
   z-index: 1;
@@ -159,19 +155,59 @@ h1 {
  * I have to replace the DOM element in Firefox.
  * Otherwise the SVG pattern will be broken.
  */
+
+ /*  font: bold 2em sans-serif;
+     line-height: 1;
+ */
 .headline {
-  font: bold 2.25em sans-serif;
-  font-size: 6em;
+  text-align: center;
+  font: bold sans-serif;
+  font-size: 5em;
   font-weight: bold;
-  line-height: 1;
 }
 
+.backgroundImage{
+  background-image: url('/media/2.jpg');
+  height: 200px;
+}
 #square{
   position: absolute;
-  top: 48.5vh;
-  left: 48.5%;
+  top: 48.5%;
+  left: 48%;
   height: 30px;
   width: 30px;
   opacity: 0;
   z-index: 1;
+}
+
+#static-text{
+  top: 25px;
+}
+
+@media screen and (min-width : 1065px){
+  #static-text{ top: 60px; }
+  .hovereffect h2 { top: 36%; }
+
+}
+@media screen and (min-width : 845px) and (max-width: 1064px){
+  .parent-header-font { font-size: 11px; }
+  #static-text{ top: 60px; }
+  .hovereffect h2 { top: 36%; }
+
+}
+@media screen and (min-width : 690px) and (max-width: 844px){
+    .parent-header-font { font-size: 9px; }
+    .intro-height { height: 70vh; }
+    .blurImg { height: 70vh; }
+}
+@media screen and (min-width : 541px) and (max-width: 689px){
+  .parent-header-font { font-size: 7px; }
+  .intro-height { height: 60vh; }
+  .blurImg { height: 60vh; }
+}
+
+@media screen and (max-width : 540px){
+  .parent-header-font { font-size: 4px; }
+  .intro-height {height: 50vh; }
+  .blurImg {height: 50vh; }
 }

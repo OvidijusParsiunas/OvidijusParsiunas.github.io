@@ -49,9 +49,16 @@ $('#parallax').parallax({
 }).call(this);
 
 $(document).ready(function(){
+var squareSide = '0';
 setTimeout(function(){
   $("#testing").hover(function(){
-      $('#square').animate({left: '49.2%', top: '49.2vh', width: '15px', height: '15px'}, 400);
+      if ($(window).width() > 845) {
+      squareSide = '15px';}
+      else if ($(window).width() < 540) {
+      squareSide = '5px';}
+      else if ($(window).width() < 845) {
+      squareSide = '10px';}
+      $('#square').animate({left: '49.2%', top: '49.2%', width: squareSide, height: squareSide}, 400);
       $('.hovereffect .overlay ').animate({left: '0%', width: '100%'}, 1500);
       $('#center-line').animate({left: '10%', width: '80%'}, 1500);
       $('#section1').addClass("hovereffect3");
@@ -59,7 +66,7 @@ setTimeout(function(){
       $('.hovereffect .overlay ').animate({left: '10%', width: '80%'}, 1500);
       $('#center-line').animate({left: '50%', width: '0'}, 1500);
       $('#section1').removeClass("hovereffect3");
-      $('#square').animate({left: '50%', top: '50vh', width: '0px', height: '0px'}, 2000);
+      $('#square').animate({left: '50%', top: '50%', width: '0', height: '0'}, 2000);
   });
 }, 4000);
 });
@@ -72,17 +79,14 @@ window.setTimeout(function(){
       angle: 0,
       animateTo:405
     });
-}, 700);
+}, 1100);
 
 window.setTimeout(function(){
- $("#square").fadeTo(700, 1);
+ $("#square").fadeTo(1100, 1);
 }, 0);
 
 window.setTimeout(function(){
-
-$('#square').animate({left: '50%', top: '50vh', width: '0px', height: '0px'}, 2100);
-
-
+$('#square').animate({left: '50%', top: '50.2%', width: '0px', height: '0px'}, 2000);
 }, 2500);
 
 window.setTimeout(function(){
@@ -104,17 +108,41 @@ window.setTimeout(function(){
 }, 8000);
 
 window.setTimeout(function(){
+  $('#something').removeClass("animated fadeIn");
+}, 6000);
+
+window.setTimeout(function(){
   $("#testing").animate({
             top: '+25%',
           height: '48%'}, 1000);
         }, 4350);
 });
 
+$.fn.isOnScreen = function(){
+
+	var win = $(window);
+
+	var viewport = {
+		top : win.scrollTop(),
+		left : win.scrollLeft()
+	};
+	viewport.right = viewport.left + win.width();
+	viewport.bottom = viewport.top + win.height();
+
+	var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+};
 
 
+$(window).scroll(function(event) {
 
-
-
+  if($("#something").isOnScreen())
+  $('#something').addClass("animated fadeIn");
+});
 
 
 Element.prototype.backgroundClipPolyfill = function () {
