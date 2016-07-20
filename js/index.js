@@ -1,6 +1,12 @@
+/*Use possible class for all effects */
 jQuery(document).ready(function() {
     jQuery('.headline').viewportChecker({
-        classToAdd: 'visible animated fadeIn'
+        classToAdd: 'visible animated slideInUp',
+        offset: 100
+       });
+       jQuery('.headline-border').viewportChecker({
+       classToAdd: 'headline-border2',
+       offset: 0
        });
 });
 
