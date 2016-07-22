@@ -185,7 +185,8 @@ h1 {
  }
 
 .headline-border{
-  display: inline-block;
+  margin: 0 auto;
+  display: block;
   align-self: center;
   width: 65%;
   border-top: 1px solid #A9A9A9;
