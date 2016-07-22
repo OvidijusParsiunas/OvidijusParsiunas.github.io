@@ -156,7 +156,6 @@ h1 {
  * Otherwise the SVG pattern will be broken.
  */
  .headline {
-   display: block;
    margin-top: 45px;
    margin-bottom: 0;
    padding-bottom: 20px;
@@ -170,6 +169,14 @@ h1 {
  svg {
    height: 8em;
    width: 100%;
+   margin-top: 45px;
+   margin-bottom: 0;
+   padding-bottom: 20px;
+   text-align: center;
+   font: bold sans-serif;
+   font-size: 5em;
+   font-weight: bold;
+   opacity: 0;
  }
 
  /*  font: bold 2em sans-serif;
@@ -185,8 +192,6 @@ h1 {
  }
 
 .headline-border{
-  margin: 0 auto;
-  display: block;
   align-self: center;
   width: 65%;
   border-top: 1px solid #A9A9A9;
