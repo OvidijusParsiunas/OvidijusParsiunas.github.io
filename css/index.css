@@ -156,12 +156,15 @@ h1 {
  * Otherwise the SVG pattern will be broken.
  */
  .headline {
+   display: block;
+   margin-top: 45px;
+   margin-bottom: 0;
+   padding-bottom: 20px;
    text-align: center;
    font: bold sans-serif;
    font-size: 5em;
    font-weight: bold;
    opacity: 0;
-   z-index: 10;
  }
 
  svg {
@@ -177,11 +180,12 @@ h1 {
  }
 
  #section1-5{
-   z-index: 15;
+   z-index: 2;
    background-image: url('/media/4.jpg')
  }
 
 .headline-border{
+  display: inline-block;
   align-self: center;
   width: 65%;
   border-top: 1px solid #A9A9A9;
@@ -366,9 +370,9 @@ h1 {
   height: 100%;
   width: 100%;
 
-  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 
   /*background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
