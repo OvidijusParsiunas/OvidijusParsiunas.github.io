@@ -109,7 +109,7 @@
   opacity: 0;
 }
 
-.hovereffect a, hovereffect p {
+.hovereffect a, .hovereffect p {
   color: #FFF;
   padding: 1em 0;
   opacity: 0;
@@ -160,10 +160,11 @@ h1 {
    margin-top: 45px;
    margin-bottom: 0;
    text-align: center;
-   font-family: "Bodoni MT",Didot,"Didot LT STD","Hoefler Text",Garamond,"Times New Roman",serif;
-   font-size: 5em;
+font-family: Arial;
+   font-size: 3em;
    font-weight: bold;
    opacity: 0;
+   color: grey;
  }
 
  svg {
@@ -182,6 +183,22 @@ h1 {
    z-index: 2;
    background-image: url('/media/4.jpg')
  }
+
+.stack{
+  left: 0;
+}
+
+.description{
+position: absolute;
+display: flex;
+ justify-content: center;
+ flex-direction: column;
+ height: 400px;
+width: 40%;
+right: 0;
+margin-top: 30%;
+height: 350px;
+}
 
 .headline-border{
   margin: 0 auto;
@@ -212,7 +229,6 @@ h1 {
 
 .motivation{
   margin: 0 auto;
-  width: 100%;
   height: 80%;
   border: 2px solid #FFF;
   margin-top: 5%;
@@ -275,11 +291,10 @@ h1 {
 }
 
 .hovereffect-temp {
-  width: 100%;
-  height: 100%;
+  margin-top: 30%;
+  left: 5%;
   float: left;
   overflow: hidden;
-  position: relative;
   text-align: center;
   cursor: default;
   border: 0;
@@ -288,14 +303,14 @@ h1 {
 	box-shadow: 0 3px 4px #444;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
-
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
-    -webkit-transform: perspective(600px) rotateX(60deg);
-  -moz-transform: perspective(600px) rotateX(60deg);
-  -ms-transform: perspective(600px) rotateX(60deg);
-  -o-transform: perspective(600px) rotateX(60deg);
-  transform: perspective(600px) rotateX(60deg);
+    -webkit-transform: perspective(600px) rotateY(40deg);
+  -moz-transform: perspective(600px) rotateY(40deg);
+  -ms-transform: perspective(600px) rotateY(40deg);
+  -o-transform: perspective(600px) rotateY(40deg);
+  transform: perspective(600px) rotateY(40deg);
+  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
 }
 
 .hovereffect-temp .overlay-temp{
@@ -307,31 +322,92 @@ h1 {
   width: 100%;
 }
 
-.hovereffect-temp:hover{
+.hovereffect-temp:hover, #m1:hover{
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-
-    -webkit-transform: perspective(0px) rotateX(0deg);
-  -moz-transform: perspective(0px) rotateX(0deg);
-  -ms-transform: perspective(0px) rotateX(0deg);
-  -o-transform: perspective(0px) rotateX(0deg);
-  transform: perspective(0px) rotateX(0deg);
-
+    -webkit-transform: perspective(600px) rotateY(15deg);
+    -moz-transform: perspective(600px) rotateY(15deg);
+    -ms-transform: perspective(600px) rotateY(15deg);
+    -o-transform: perspective(600px) rotateY(15deg);
+    transform: perspective(600px) rotateY(15deg);
 }
+
+#m1{
+  margin-left: 18%;
+    -webkit-transform: perspective(800px) rotateY(15deg);
+    -moz-transform: perspective(800px) rotateY(15deg);
+    -ms-transform: perspective(800px) rotateY(15deg);
+    -o-transform: perspective(800px) rotateY(15deg);
+    transform: perspective(800px) rotateY(20deg);
+}
+
+#m2{
+  margin-left: 9%;
+}
+
+#m3{
+  margin-left: 6%;
+}
+
+#m4{
+  margin-left: 3%;
+}
+
+#m2:hover ~ #m1, #m3:hover ~ #m1, #m4:hover ~ #m1{
+margin-left: 440px;
+-webkit-transition: all 0.45s ease-in;
+  transition: all 0.45s ease-in;
+  -webkit-transform: perspective(800px) rotateY(70deg);
+  -moz-transform: perspective(800px) rotateY(70deg);
+  -ms-transform: perspective(800px) rotateY(70deg);
+  -o-transform: perspective(800px) rotateY(70deg);
+  transform: perspective(800px) rotateY(70deg);
+}
+
+#m3:hover ~ #m2, #m4:hover ~ #m2{
+
+  margin-left: 400px;
+-webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  -webkit-transform: perspective(800px) rotateY(70deg);
+  -moz-transform: perspective(800px) rotateY(80deg);
+  -ms-transform: perspective(800px) rotateY(80deg);
+  -o-transform: perspective(800px) rotateY(80deg);
+  transform: perspective(800px) rotateY(70deg);
+}
+
+#m4:hover ~ #m3{
+
+  margin-left: 360px;
+  -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    -webkit-transform: perspective(800px) rotateY(70deg);
+    -moz-transform: perspective(800px) rotateY(80deg);
+    -ms-transform: perspective(800px) rotateY(80deg);
+    -o-transform: perspective(800px) rotateY(80deg);
+    transform: perspective(800px) rotateY(70deg);
+}
+@-webkit-keyframes mymove {
+    /*0%   {padding: 0px;}
+    25%  {padding: 200px;}
+    100%   {padding: 0px;}*/
+}
+
 .hovereffect-temp img {
   display: block;
   position: relative;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.8s ease-in;
+  transition: all 0.8s ease-in;
 }
 
 .hovereffect-temp:hover img {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
   filter: blur(3px);
-  -webkit-filter: blur(3px);
+  -webkit-filter: blur(2px);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
+
 }
 
 .hovereffect-temp h2 {
@@ -391,9 +467,9 @@ h1 {
   height: 100%;
   width: 100%;
 
-  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 
   /*background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));

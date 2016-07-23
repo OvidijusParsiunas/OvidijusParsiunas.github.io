@@ -126,10 +126,6 @@ window.setTimeout(function(){
         }, 4350);
 });
 
-
-
-
-
 Element.prototype.backgroundClipPolyfill = function () {
   var a = arguments[0],
       d = document,
