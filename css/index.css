@@ -157,14 +157,14 @@ h1 {
  */
  .headline {
    display: block;
-   margin-top: 45px;
+   margin-top: 60px;
    margin-bottom: 0;
    text-align: center;
-font-family: Arial;
-   font-size: 3em;
+   font-family: Arial;
+   font-size: 2.5em;
    font-weight: bold;
    opacity: 0;
-   color: grey;
+   color: black;
  }
 
  svg {
@@ -191,8 +191,8 @@ font-family: Arial;
 .description{
 position: absolute;
 display: flex;
- justify-content: center;
- flex-direction: column;
+justify-content: center;
+flex-direction: column;
  height: 400px;
 width: 40%;
 right: 0;
