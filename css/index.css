@@ -189,15 +189,12 @@ h1 {
 }
 
 .description{
-position: absolute;
 display: flex;
 justify-content: center;
 flex-direction: column;
- height: 400px;
+height: 400px;
 width: 40%;
 right: 0;
-margin-top: 30%;
-height: 350px;
 }
 
 .headline-border{
@@ -291,7 +288,7 @@ height: 350px;
 }
 
 .hovereffect-temp {
-  margin-top: 30%;
+  margin-top: 5%;
   left: 5%;
   float: left;
   overflow: hidden;
@@ -333,7 +330,7 @@ height: 350px;
 }
 
 #m1{
-  margin-left: 18%;
+  margin-left: 22%;
     -webkit-transform: perspective(800px) rotateY(15deg);
     -moz-transform: perspective(800px) rotateY(15deg);
     -ms-transform: perspective(800px) rotateY(15deg);
