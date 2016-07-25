@@ -124,6 +124,9 @@ window.setTimeout(function(){
             top: '+25%',
           height: '48%'}, 1000);
         }, 4350);
+
+window.setTimeout(function(){
+alert($(window).width());}, 450);
 });
 
 Element.prototype.backgroundClipPolyfill = function () {
