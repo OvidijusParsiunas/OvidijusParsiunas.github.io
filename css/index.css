@@ -172,6 +172,9 @@ h1 {
    width: 100%;
  }
 
+.jumpIn{
+  opacity: 1;
+}
  /*  font: bold 2em sans-serif;
      line-height: 1;
  */
@@ -508,7 +511,7 @@ margin-left: 440px;
   -moz-transform: perspective(600px) rotateY(-15deg);
   -ms-transform: perspective(600px) rotateY(-15deg);
   -o-transform: perspective(600px) rotateY(-15deg);
-  transform: perspective(600px) rotateY(-15deg);
+  transform: perspective(600px) rotateY(-12deg);
 }
 .clr:after{
   content:"";
@@ -607,10 +610,9 @@ margin-left: 440px;
 
 
 /* HOVER EFFECT  */
-
-#categories li div h1 {
-  bottom:50%;
-  padding-bottom:10%;
+#categories li div h1{
+    bottom:50%;
+    padding-bottom:10%;
 }
 
 #categories li div p{
